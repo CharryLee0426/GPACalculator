@@ -1,0 +1,457 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DBFA373A286F2F39005E759B /* GPACalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFA3739286F2F39005E759B /* GPACalculatorApp.swift */; };
+		DBFA373C286F2F39005E759B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFA373B286F2F39005E759B /* ContentView.swift */; };
+		DBFA373E286F2F3B005E759B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBFA373D286F2F3B005E759B /* Assets.xcassets */; };
+		DBFA3741286F2F3B005E759B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBFA3740286F2F3B005E759B /* Preview Assets.xcassets */; };
+		DBFA374A286F678A005E759B /* GPA.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DBFA3748286F678A005E759B /* GPA.xcdatamodeld */; };
+		DBFA374C286F6A43005E759B /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFA374B286F6A43005E759B /* DataController.swift */; };
+		DBFA374F286F6A77005E759B /* TimeFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFA374E286F6A77005E759B /* TimeFormatting.swift */; };
+		DBFA3751286F6BAB005E759B /* HashUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFA3750286F6BAB005E759B /* HashUtils.swift */; };
+		DBFA3756286F6E6E005E759B /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFA3755286F6E6E005E759B /* SignInView.swift */; };
+		DBFA3758286F6EF7005E759B /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFA3757286F6EF7005E759B /* ProfileView.swift */; };
+		DBFA375A286F6F2E005E759B /* ProfileEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFA3759286F6F2E005E759B /* ProfileEditView.swift */; };
+		DBFA375C286F6F80005E759B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFA375B286F6F80005E759B /* LoginView.swift */; };
+		DBFA375E286F702A005E759B /* IndexWelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFA375D286F702A005E759B /* IndexWelcomeView.swift */; };
+		DBFA3760286F7059005E759B /* IndexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFA375F286F7059005E759B /* IndexView.swift */; };
+		DBFA3762286F709C005E759B /* CourceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFA3761286F709C005E759B /* CourceView.swift */; };
+		DBFA3764286F70D6005E759B /* CourceEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFA3763286F70D6005E759B /* CourceEditView.swift */; };
+		DBFA3766286F7126005E759B /* CourceAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFA3765286F7126005E759B /* CourceAddView.swift */; };
+		DBFA3768286F733B005E759B /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFA3767286F733B005E759B /* SignUpView.swift */; };
+		DBFA376A286F7509005E759B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DBFA3769286F7509005E759B /* README.md */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DBFA3736286F2F39005E759B /* GPACalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPACalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBFA3739286F2F39005E759B /* GPACalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPACalculatorApp.swift; sourceTree = "<group>"; };
+		DBFA373B286F2F39005E759B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DBFA373D286F2F3B005E759B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DBFA3740286F2F3B005E759B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DBFA3749286F678A005E759B /* GPA.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GPA.xcdatamodel; sourceTree = "<group>"; };
+		DBFA374B286F6A43005E759B /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		DBFA374E286F6A77005E759B /* TimeFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFormatting.swift; sourceTree = "<group>"; };
+		DBFA3750286F6BAB005E759B /* HashUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashUtils.swift; sourceTree = "<group>"; };
+		DBFA3755286F6E6E005E759B /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		DBFA3757286F6EF7005E759B /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		DBFA3759286F6F2E005E759B /* ProfileEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditView.swift; sourceTree = "<group>"; };
+		DBFA375B286F6F80005E759B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		DBFA375D286F702A005E759B /* IndexWelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexWelcomeView.swift; sourceTree = "<group>"; };
+		DBFA375F286F7059005E759B /* IndexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexView.swift; sourceTree = "<group>"; };
+		DBFA3761286F709C005E759B /* CourceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourceView.swift; sourceTree = "<group>"; };
+		DBFA3763286F70D6005E759B /* CourceEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourceEditView.swift; sourceTree = "<group>"; };
+		DBFA3765286F7126005E759B /* CourceAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourceAddView.swift; sourceTree = "<group>"; };
+		DBFA3767286F733B005E759B /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		DBFA3769286F7509005E759B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DBFA3733286F2F39005E759B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DBFA372D286F2F39005E759B = {
+			isa = PBXGroup;
+			children = (
+				DBFA3769286F7509005E759B /* README.md */,
+				DBFA3738286F2F39005E759B /* GPACalculator */,
+				DBFA3737286F2F39005E759B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DBFA3737286F2F39005E759B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DBFA3736286F2F39005E759B /* GPACalculator.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DBFA3738286F2F39005E759B /* GPACalculator */ = {
+			isa = PBXGroup;
+			children = (
+				DBFA3752286F6C2D005E759B /* Views */,
+				DBFA3747286F675B005E759B /* Model */,
+				DBFA374D286F6A60005E759B /* Helpers */,
+				DBFA3739286F2F39005E759B /* GPACalculatorApp.swift */,
+				DBFA373D286F2F3B005E759B /* Assets.xcassets */,
+				DBFA373F286F2F3B005E759B /* Preview Content */,
+			);
+			path = GPACalculator;
+			sourceTree = "<group>";
+		};
+		DBFA373F286F2F3B005E759B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				DBFA3740286F2F3B005E759B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DBFA3747286F675B005E759B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DBFA3748286F678A005E759B /* GPA.xcdatamodeld */,
+				DBFA374B286F6A43005E759B /* DataController.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DBFA374D286F6A60005E759B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				DBFA374E286F6A77005E759B /* TimeFormatting.swift */,
+				DBFA3750286F6BAB005E759B /* HashUtils.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		DBFA3752286F6C2D005E759B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DBFA3754286F6C68005E759B /* Index */,
+				DBFA3753286F6C5C005E759B /* Login */,
+				DBFA373B286F2F39005E759B /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DBFA3753286F6C5C005E759B /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				DBFA375B286F6F80005E759B /* LoginView.swift */,
+				DBFA3755286F6E6E005E759B /* SignInView.swift */,
+				DBFA3767286F733B005E759B /* SignUpView.swift */,
+				DBFA3757286F6EF7005E759B /* ProfileView.swift */,
+				DBFA3759286F6F2E005E759B /* ProfileEditView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		DBFA3754286F6C68005E759B /* Index */ = {
+			isa = PBXGroup;
+			children = (
+				DBFA375D286F702A005E759B /* IndexWelcomeView.swift */,
+				DBFA375F286F7059005E759B /* IndexView.swift */,
+				DBFA3761286F709C005E759B /* CourceView.swift */,
+				DBFA3763286F70D6005E759B /* CourceEditView.swift */,
+				DBFA3765286F7126005E759B /* CourceAddView.swift */,
+			);
+			path = Index;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DBFA3735286F2F39005E759B /* GPACalculator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBFA3744286F2F3B005E759B /* Build configuration list for PBXNativeTarget "GPACalculator" */;
+			buildPhases = (
+				DBFA3732286F2F39005E759B /* Sources */,
+				DBFA3733286F2F39005E759B /* Frameworks */,
+				DBFA3734286F2F39005E759B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GPACalculator;
+			productName = GPACalculator;
+			productReference = DBFA3736286F2F39005E759B /* GPACalculator.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DBFA372E286F2F39005E759B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					DBFA3735286F2F39005E759B = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = DBFA3731286F2F39005E759B /* Build configuration list for PBXProject "GPACalculator" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DBFA372D286F2F39005E759B;
+			productRefGroup = DBFA3737286F2F39005E759B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DBFA3735286F2F39005E759B /* GPACalculator */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DBFA3734286F2F39005E759B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBFA376A286F7509005E759B /* README.md in Resources */,
+				DBFA3741286F2F3B005E759B /* Preview Assets.xcassets in Resources */,
+				DBFA373E286F2F3B005E759B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DBFA3732286F2F39005E759B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBFA375E286F702A005E759B /* IndexWelcomeView.swift in Sources */,
+				DBFA3760286F7059005E759B /* IndexView.swift in Sources */,
+				DBFA3758286F6EF7005E759B /* ProfileView.swift in Sources */,
+				DBFA3764286F70D6005E759B /* CourceEditView.swift in Sources */,
+				DBFA375A286F6F2E005E759B /* ProfileEditView.swift in Sources */,
+				DBFA3766286F7126005E759B /* CourceAddView.swift in Sources */,
+				DBFA374F286F6A77005E759B /* TimeFormatting.swift in Sources */,
+				DBFA3756286F6E6E005E759B /* SignInView.swift in Sources */,
+				DBFA373C286F2F39005E759B /* ContentView.swift in Sources */,
+				DBFA374C286F6A43005E759B /* DataController.swift in Sources */,
+				DBFA3751286F6BAB005E759B /* HashUtils.swift in Sources */,
+				DBFA3762286F709C005E759B /* CourceView.swift in Sources */,
+				DBFA3768286F733B005E759B /* SignUpView.swift in Sources */,
+				DBFA373A286F2F39005E759B /* GPACalculatorApp.swift in Sources */,
+				DBFA375C286F6F80005E759B /* LoginView.swift in Sources */,
+				DBFA374A286F678A005E759B /* GPA.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		DBFA3742286F2F3B005E759B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DBFA3743286F2F3B005E759B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DBFA3745286F2F3B005E759B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"GPACalculator/Preview Content\"";
+				DEVELOPMENT_TEAM = AU5R4R26PL;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lichenxidian.GPACalculator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DBFA3746286F2F3B005E759B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"GPACalculator/Preview Content\"";
+				DEVELOPMENT_TEAM = AU5R4R26PL;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lichenxidian.GPACalculator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DBFA3731286F2F39005E759B /* Build configuration list for PBXProject "GPACalculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBFA3742286F2F3B005E759B /* Debug */,
+				DBFA3743286F2F3B005E759B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DBFA3744286F2F3B005E759B /* Build configuration list for PBXNativeTarget "GPACalculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBFA3745286F2F3B005E759B /* Debug */,
+				DBFA3746286F2F3B005E759B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DBFA3748286F678A005E759B /* GPA.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DBFA3749286F678A005E759B /* GPA.xcdatamodel */,
+			);
+			currentVersion = DBFA3749286F678A005E759B /* GPA.xcdatamodel */;
+			path = GPA.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = DBFA372E286F2F39005E759B /* Project object */;
+}
