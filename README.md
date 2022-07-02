@@ -8,7 +8,9 @@ So you can see the structure of the App. It built with a mode called MVVC. `Mode
 
 ## 2. Develop Line
 This README is **not** an instruction file about this app when is still developing. It's a develop log however.
-on July 2, The `SignInView` UI Design finished.
+
+###July 2, 2022 
+The `SignInView` UI Design finished.
 
 The `SignInView` in portrait mode.
 
@@ -25,3 +27,18 @@ And you can open a sheet window for signing up. ⬆️
 A more important thing: support dark mode
 
 <img src="./MarkdownImages/SignInViewDarkMode.png" style="zoom:50%;" />
+
+Avatar View finished. Avatar is a designed badge. It can be personalized by changing the `hueRotation` attribute.
+
+Avatar in Phone (bigger mode)
+
+<img src="./MarkdownImages/Avatar.png" style="zoom:50%;" />
+
+Avatar Personalization Examples
+
+![](./MarkdownImages/PossibleAvatarShow.png)
+
+There are two possible ways for users to select their avatars:
+
+1. choose it from several system default avatars (different hueRotations) and store the index (maybe this attribute can be called `avatarindex`);
+2. set a picker to set a `hueRotation` to the avatar view and store the `avatarhuerotation` attribute as the avatar of user.
