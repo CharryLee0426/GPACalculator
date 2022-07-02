@@ -22,3 +22,6 @@ And you can open a sheet window for signing up. ⬆️
 
 <img src="./MarkdownImages/CallSignUp.gif" style="zoom: 33%;" />
 
+A more important thing: support dark mode
+
+<img src="./MarkdownImages/SignInViewDarkMode.png" style="zoom:50%;" />

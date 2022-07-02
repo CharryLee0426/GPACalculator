@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		DB194CAA28700ADA00428D80 /* CallSignUp.gif in Resources */ = {isa = PBXBuildFile; fileRef = DB194CA928700ADA00428D80 /* CallSignUp.gif */; };
-		DB194CAC28700AFF00428D80 /* SignInView.png in Resources */ = {isa = PBXBuildFile; fileRef = DB194CAB28700AFF00428D80 /* SignInView.png */; };
 		DB194CAE28700B0D00428D80 /* SignInViewLandscapeRight.png in Resources */ = {isa = PBXBuildFile; fileRef = DB194CAD28700B0D00428D80 /* SignInViewLandscapeRight.png */; };
+		DB194CB0287030C000428D80 /* SignInViewDarkMode.png in Resources */ = {isa = PBXBuildFile; fileRef = DB194CAF287030C000428D80 /* SignInViewDarkMode.png */; };
+		DB194CB2287030CB00428D80 /* SignInView.png in Resources */ = {isa = PBXBuildFile; fileRef = DB194CB1287030CB00428D80 /* SignInView.png */; };
 		DBFA373A286F2F39005E759B /* GPACalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFA3739286F2F39005E759B /* GPACalculatorApp.swift */; };
 		DBFA373C286F2F39005E759B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFA373B286F2F39005E759B /* ContentView.swift */; };
 		DBFA373E286F2F3B005E759B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBFA373D286F2F3B005E759B /* Assets.xcassets */; };
@@ -33,8 +34,9 @@
 
 /* Begin PBXFileReference section */
 		DB194CA928700ADA00428D80 /* CallSignUp.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = CallSignUp.gif; sourceTree = "<group>"; };
-		DB194CAB28700AFF00428D80 /* SignInView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SignInView.png; sourceTree = "<group>"; };
 		DB194CAD28700B0D00428D80 /* SignInViewLandscapeRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SignInViewLandscapeRight.png; sourceTree = "<group>"; };
+		DB194CAF287030C000428D80 /* SignInViewDarkMode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SignInViewDarkMode.png; sourceTree = "<group>"; };
+		DB194CB1287030CB00428D80 /* SignInView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SignInView.png; path = ../../../Desktop/SignInView.png; sourceTree = "<group>"; };
 		DBFA3736286F2F39005E759B /* GPACalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPACalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBFA3739286F2F39005E759B /* GPACalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPACalculatorApp.swift; sourceTree = "<group>"; };
 		DBFA373B286F2F39005E759B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -71,8 +73,9 @@
 		DB194CA82870053900428D80 /* MarkdownImages */ = {
 			isa = PBXGroup;
 			children = (
+				DB194CB1287030CB00428D80 /* SignInView.png */,
+				DB194CAF287030C000428D80 /* SignInViewDarkMode.png */,
 				DB194CAD28700B0D00428D80 /* SignInViewLandscapeRight.png */,
-				DB194CAB28700AFF00428D80 /* SignInView.png */,
 				DB194CA928700ADA00428D80 /* CallSignUp.gif */,
 			);
 			path = MarkdownImages;
@@ -231,8 +234,9 @@
 				DB194CAE28700B0D00428D80 /* SignInViewLandscapeRight.png in Resources */,
 				DBFA376A286F7509005E759B /* README.md in Resources */,
 				DBFA3741286F2F3B005E759B /* Preview Assets.xcassets in Resources */,
+				DB194CB2287030CB00428D80 /* SignInView.png in Resources */,
+				DB194CB0287030C000428D80 /* SignInViewDarkMode.png in Resources */,
 				DBFA373E286F2F3B005E759B /* Assets.xcassets in Resources */,
-				DB194CAC28700AFF00428D80 /* SignInView.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
