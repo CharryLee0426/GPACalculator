@@ -12,7 +12,7 @@ on July 2, The `SignInView` UI Design finished.
 
 The `SignInView` in portrait mode.
 
-![](./MarkdownImages/SignInView.png)
+<img src="./MarkdownImages/SignInView.png" style="zoom:50%;" />
 
 The SignInView in landscape right mode (similar in landscape left mode).
 
@@ -20,5 +20,5 @@ The SignInView in landscape right mode (similar in landscape left mode).
 
 And you can open a sheet window for signing up. ⬆️ 
 
-![](./MarkdownImages/CallSignUp.gif)
+<img src="./MarkdownImages/CallSignUp.gif" style="zoom: 33%;" />
 
