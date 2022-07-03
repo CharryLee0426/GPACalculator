@@ -63,4 +63,32 @@ The main works of this day:
 
 3. Update the Core Data Model;
 
-4. 
+4. Finished the UI design, logic and animation of Login function
+
+   There are two gifs showing what I have done:
+
+   1. Update `SignUpView` animation
+
+      <img src="./MarkdownImages/CallSignUp.gif" style="zoom:33%;" />
+
+   2. The animation between `SignInView` and `ProfileView`
+
+      <img src="./MarkdownImages/LoginAnimation.gif" style="zoom:33%;" />
+
+   The LoginView is the root view container for the login function. It contains `SignInView` and `ProfileView` by using a `ZStack`. The animation between these two views is based on the absolute position in the screen, which means that there are actually two views rendered but just one can be seen by users because there is always one view is located out of the screen whether it is logined or not. It can be applied to all ApplePlatform devices if the offset value is big enough.
+
+   The animation type used in that situation is called spring. The best practice for all platforms is
+
+   * response: 1;
+   * dampingFraction: 0.5;
+   * blendDuration: 0.5.
+
+   It is tested **OK** for iOS/iPadOS, macOS, watchOS. The situation in tvOS is not for sure.
+
+
+
+### July 4, 2022
+
+I have to spend all my time for preparing IELTS.
+
+The Independence Day of the US 🇺🇸

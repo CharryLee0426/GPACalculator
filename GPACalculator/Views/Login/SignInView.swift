@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SignInView: View {
     @Environment(\.colorScheme) var colorScheme
-    @State private var isSignin: Bool = false
+    @Binding var isLogined: Bool
     @State var isSignUp: Bool = false
     @State private var userAccount: String = ""
     @State private var userPassword: String = ""
@@ -76,7 +76,11 @@ struct SignInView: View {
 
                     Button {
                         //login function, not below
-                        isSignin.toggle()
+                        #if os(iOS)
+                        withAnimation(.spring(response: 1, dampingFraction: 0.5, blendDuration: 0.5)) {
+                            isLogined.toggle()
+                        }
+                        #endif
                     } label: {
                         Text("Sign in")
                             .bold()
@@ -86,9 +90,9 @@ struct SignInView: View {
                             .background(Color.blue)
                             .cornerRadius(12)
                     }
-                    .alert(isPresented: $isSignin) {
-                        Alert(title: Text("Success"), message: Text("Logined successfullly"), dismissButton: .default(Text("OK")))
-                    }
+//                    .alert(isPresented: $falsse) {
+//                        Alert(title: Text("Success"), message: Text("Logined successfullly"), dismissButton: .default(Text("OK")))
+//                    }
                     
                     Spacer()
                 }
@@ -96,11 +100,12 @@ struct SignInView: View {
             }
         }
         .background((colorScheme == .dark) ? Color.black : Color(UIColor.systemGray6))
+        .offset(x: isLogined ? -2000 : 0)
     }
 }
 
 struct SignInView_Previews: PreviewProvider {
     static var previews: some View {
-        SignInView()
+        SignInView(isLogined: .constant(false))
     }
 }

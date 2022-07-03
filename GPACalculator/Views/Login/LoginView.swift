@@ -11,10 +11,9 @@ struct LoginView: View {
     @State var isLogined: Bool = false
     
     var body: some View {
-        if isLogined {
-            ProfileView()
-        } else {
-            SignInView()
+        ZStack {
+            SignInView(isLogined: $isLogined)
+            ProfileView(isLogined: $isLogined)
         }
     }
 }
