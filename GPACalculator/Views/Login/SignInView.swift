@@ -66,7 +66,7 @@ struct SignInView: View {
                             .font(.footnote)
                     }
                     .sheet(isPresented: $isSignUp) {
-                        SignUpView()
+                        SignUpView(isSignUp: $isSignUp)
                     }
                 }
                 .padding()
