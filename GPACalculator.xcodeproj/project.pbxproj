@@ -170,9 +170,9 @@
 		DBFA3752286F6C2D005E759B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DBFA373B286F2F39005E759B /* ContentView.swift */,
 				DBFA3754286F6C68005E759B /* Index */,
 				DBFA3753286F6C5C005E759B /* Login */,
-				DBFA373B286F2F39005E759B /* ContentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
