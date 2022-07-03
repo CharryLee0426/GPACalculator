@@ -61,4 +61,6 @@ The main works of this day:
 
 2. Add a test class `UserTest` for testing the `ProfileView` without CoreData Model;
 
-3. 
+3. Update the Core Data Model;
+
+4. 
