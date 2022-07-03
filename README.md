@@ -11,7 +11,7 @@ So you can see the structure of the App. It built with a mode called MVVC. `Mode
 
 This README is **not** an instruction file about this app when is still developing. It's a develop log however.
 
-###July 2, 2022 
+### July 2, 2022 
 
 The `SignInView` UI Design finished.
 
@@ -52,3 +52,9 @@ Today's important work is finishinig the UI Design of the `SignUpView`. I choose
 Because this page won't show as a full-screen page (it will presented as a sheet page who is called by the `sign up` button in `SignInView`), I use the `Form` view, the Apple official solution for submitting information, to collect the input from user.
 
 A small point I got: Swift Playground is a good tool for testing the UI performance between Apple platforms.
+
+The main works of this day:
+
+1. Add gender🚹🚺 section in `SignUpView`;
+
+   <img src="./MarkdownImages/SignUpViewGender.png" style="zoom:50%;" />

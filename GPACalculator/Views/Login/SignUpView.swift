@@ -17,6 +17,8 @@ struct SignUpView: View {
     @State var userAccount: String = ""
     @State var userPassword: String = ""
     @State var userAvatar: Double = 0.0
+    // 1 for male; 0 for female
+    @State var userGender: Int = 1
     
     var body: some View {
         NavigationView {
@@ -65,6 +67,25 @@ struct SignUpView: View {
                 } header: {
                     Text("Password")
                         .bold()
+                }
+                
+                Section {
+                    Picker("", selection: $userGender) {
+                        Text("🚹")
+                            .tag(1)
+                        Text("🚺")
+                            .tag(0)
+                    }
+                    .pickerStyle(.segmented)
+                } header: {
+                    HStack {
+                        Text("Gender: ")
+                        if userGender == 1 {
+                            Text("🚹")
+                        } else {
+                            Text("🚺")
+                        }
+                    }
                 }
                 
                 Section {
