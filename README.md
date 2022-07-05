@@ -95,3 +95,20 @@ The Independence Day of the US 🇺🇸
 
 ### July 5, 2022
 I received my paper book *The Swift Programming Language version 5.7* yesterday and thaught about the animation logic between `SignInView` and `ProfileView`. Maybe there are still some problems in that logic. However, I must stop for several days because of exam. What a difficult test the Speaking part is!!!
+
+Because of re-pademic in Xi'an, My IELTS test is canceled and I decided to take my test one week later. It's the time for me to adding the data model for login function.
+
+What shown at the following are some methods about the login, including utils and CRUDs.
+
+| Method Name | Description                                                  | Parameters           | Returns |
+| ----------- | ------------------------------------------------------------ | -------------------- | ------- |
+| MD5         | Convey the plainMessage to MD5 Hash Value (not a very safe way although) | plainMessage: String | String  |
+| Save        |                                                              |                      |         |
+|             |                                                              |                      |         |
+|             |                                                              |                      |         |
+|             |                                                              |                      |         |
+|             |                                                              |                      |         |
+|             |                                                              |                      |         |
+|             |                                                              |                      |         |
+|             |                                                              |                      |         |
+
