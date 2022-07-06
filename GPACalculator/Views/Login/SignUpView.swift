@@ -10,15 +10,42 @@ import SwiftUI
 
 struct SignUpView: View {
     @Environment(\.colorScheme) var colorScheme
+    @Environment(\.managedObjectContext) var managedObjContext
+    @FetchRequest(sortDescriptors: [SortDescriptor(\.useravatar, order: .reverse)]) var users: FetchedResults<User>
+    
     @Binding var isSignUp: Bool
     @State var userName: String = ""
     @State var isSucceessSignUP: Bool = false
+    @State var isFailedSignUP: Bool = false
     @State var isShowPassword: Bool = false
     @State var userAccount: String = ""
     @State var userPassword: String = ""
     @State var userAvatar: Double = 0.0
     // 1 for male; 0 for female
     @State var userGender: Int = 1
+    
+    private func checkUser(userAccount: String) -> Bool {
+        for user in users {
+            if user.useraccount! == userAccount {
+                return true
+            }
+        }
+        
+        return false
+    }
+    
+    private func signup() {
+        // add function that check the repeat user-add request
+        if !checkUser(userAccount: userAccount) {
+            DataController().addUser(userName: userName, userAccount: userAccount, userPassword: userPassword, userAvatar: userAvatar, userGender: userGender, context: managedObjContext)
+            isSucceessSignUP = true
+            isFailedSignUP = false
+        } else {
+            print("Already exists...")
+            isFailedSignUP = true
+            isSucceessSignUP = false
+        }
+    }
     
     var body: some View {
         NavigationView {
@@ -116,12 +143,12 @@ struct SignUpView: View {
                         
                         Button {
                             // sign up method
-                            isSucceessSignUP.toggle()
+                            signup()
                         } label: {
                             Text("Sign UP🔥")
                         }
                         .alert(isPresented: $isSucceessSignUP) {
-                            Alert(title: Text("Success"), message: Text("You created an account successfully!"), dismissButton: .default(Text("OK")))
+                            Alert(title: Text("Success"), message: Text("\(userName) created \"\(userAccount)\" successfully!"), dismissButton: .default(Text("OK"), action: {isSignUp.toggle()}))
                         }
                         
                         Spacer()
