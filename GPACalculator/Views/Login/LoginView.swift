@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct LoginView: View {
+    @State var user: FetchedResults<User>.Element?
     @State var isLogined: Bool = false
     
     var body: some View {
         ZStack {
-            SignInView(isLogined: $isLogined)
-            ProfileView(isLogined: $isLogined)
+            SignInView(isLogined: $isLogined, signeduser: $user)
+            if user != nil {
+                ProfileView(user: user, isLogined: $isLogined)
+            }
         }
     }
 }
