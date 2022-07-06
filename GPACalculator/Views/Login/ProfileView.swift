@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct ProfileView: View {
-    @State var testUser: UserTest = UserTest(id: UUID(), userName: "Charry", userAccount: "charrylee0426", userPassword: "123456", userGender: 1, userDescription: "2233", userAvatar: 45.3)
+    @Environment(\.managedObjectContext) var managedObjContext
+    
+    @State var user: FetchedResults<User>.Element?
     @State var isEdit: Bool = false
     @Binding var isLogined: Bool
     
@@ -20,20 +22,20 @@ struct ProfileView: View {
                         .frame(width: 300, height: 300)
                         .scaleEffect(1.0 / 3.0)
                         .frame(width: 100, height: 100)
-                        .hueRotation(Angle(degrees: testUser.userAvatar))
+                        .hueRotation(Angle(degrees: user!.useravatar))
                     
                     VStack(alignment: .leading) {
                         HStack {
-                            Text(testUser.userName)
+                            Text(user!.username!)
                                 .font(.title)
                                 .bold()
-                            if testUser.userGender == 1 {
+                            if user!.usergender == 1 {
                                 Text("🚹")
                             } else {
                                 Text("🚺")
                             }
                         }
-                        Text(testUser.userAccount)
+                        Text(user!.useraccount!)
                             .font(.footnote)
                     }
                     .padding(.top, -30)
@@ -48,10 +50,10 @@ struct ProfileView: View {
                         .bold()
                         .foregroundColor(.secondary)
                     
-                    if testUser.userDescription == "" {
+                    if user!.userdescription! == "" {
                         Text("It seems that you haven't set some description...")
                     } else {
-                        Text(testUser.userDescription)
+                        Text(user!.userdescription!)
                             .frame(minHeight: 20)
                     }
                 }
@@ -92,17 +94,11 @@ struct ProfileView: View {
                     Text("Edit")
                 }
                 .sheet(isPresented: $isEdit) {
-                        ProfileEditView()
+                        ProfileEditView(isEdit: $isEdit, user: user!)
                 }
             }
         }
         .offset(x: isLogined ? 0 : 2000)
         .navigationViewStyle(.stack)
-    }
-}
-
-struct ProfileView_Previews: PreviewProvider {
-    static var previews: some View {
-        ProfileView(isLogined: .constant(true))
     }
 }
