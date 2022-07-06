@@ -100,15 +100,85 @@ Because of re-pademic in Xi'an, My IELTS test is canceled and I decided to take 
 
 What shown at the following are some methods about the login, including utils and CRUDs.
 
-| Method Name | Description                                                  | Parameters           | Returns |
-| ----------- | ------------------------------------------------------------ | -------------------- | ------- |
-| MD5         | Convey the plainMessage to MD5 Hash Value (not a very safe way although) | plainMessage: String | String  |
-| Save        |                                                              |                      |         |
-|             |                                                              |                      |         |
-|             |                                                              |                      |         |
-|             |                                                              |                      |         |
-|             |                                                              |                      |         |
-|             |                                                              |                      |         |
-|             |                                                              |                      |         |
-|             |                                                              |                      |         |
+| Method Name | Description                                                  | Parameters                                                   | Returns |
+| ----------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------- |
+| MD5         | Convey the plainMessage to MD5 Hash Value (not a very safe way although) | plainMessage: String                                         | String  |
+| save        | Save the entity object to your Core Data Model               | context: NSManagedObjectContext                              | Void    |
+| addUser     | Add the new user to your Core Data Model                     | userName, userAccount, userPassword: String; userAvatar: Double; userGender: Int; context: NSManagedObjectContext | Void    |
+| editUser    | Edit the existed user to your Core Data Model                | user: User; userName, userPassword, userDescription: String; userAvatar: Double; userGender: Int; context: NSManagedObjectContext | Void    |
+| checkUser   | Check whether the user exists in your Core Data Model by matching the userAccount | userAccount: String                                          | Bool    |
+| selectUser  | Select the required user from the whole Core Data Model by matching the userAccount and userPassword | userAccount: String; userPassword: String                    | User?   |
+| signin      | Try signing in by using the account and password provided by users | Void                                                         | Void    |
+| signup      | Create a new account by using the account and password provided by users | Void                                                         | Void    |
 
+Potential dangers: Can't request specified recordings or just some attributes of the entity, but only the whole entire recordings.
+
+### July 6, 2022
+
+Source of truth and data in the views that possibly used:
+
+* `LoginView`:
+
+  * ```swift
+        @State var user: FetchedResults<User>.Element?
+    ```
+
+    used to store the logined user ("Me")
+
+* `SignInView`:
+
+  * ```swift
+        @FetchRequest(sortDescriptors: [SortDescriptor(\.useravatar, order: .reverse)]) var users: FetchedResults<User>
+        @Binding var signeduser: FetchedResults<User>.Element?
+    ```
+
+    users are all the user recordings in the database and `signeduser` is blinded to the `user` in the `LoginView` 
+
+  * ```swift
+        @State var isSignUp: Bool = false
+        @State var isFailSignUp: Bool = false
+    ```
+
+    These two State variables are used to tell whether sign in process is executed successfully
+
+* `SignUpView`:
+
+  * ```swift
+        @Binding var isSignUp: Bool
+    ```
+
+    It is blinded to the same name State variable in the `SignInView`
+
+  * ```swift
+    		@State var isSucceessSignUP: Bool = false
+        @State var isFailedSignUP: Bool = false
+    ```
+
+    Thery're used to tell whether sign up process is execuded successfully
+
+* `ProfileView`:
+
+  * ```swift
+    		@Binding var isLogined: Bool
+    ```
+
+    It's blinded to the same name variable in `LoginView`.
+
+* `ProfileEditView`:
+
+  * ```swift
+    		@Binding var isEdit: Bool
+    ```
+
+    It's blinded to the same variable in `ProfileView`.
+
+The designed state flow diagram is the following.
+
+<img src="./MarkdownImages/LoginStateFlowDiagram.png" style="zoom: 33%;" />
+
+🎉 At this time, it can say that "Login function has been done already"
+
+Potential features that needs further development:
+
+* Account Delete Function, which is very important for user's rights and privacy;
+* Choose Avatar from Image, not just change the color of the `Avatar`;
