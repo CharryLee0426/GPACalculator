@@ -9,10 +9,39 @@ import SwiftUI
 
 struct SignInView: View {
     @Environment(\.colorScheme) var colorScheme
+    @FetchRequest(sortDescriptors: [SortDescriptor(\.useravatar, order: .reverse)]) var users: FetchedResults<User>
+    
     @Binding var isLogined: Bool
+    @Binding var signeduser: FetchedResults<User>.Element?
     @State var isSignUp: Bool = false
+    @State var isFailSignUp: Bool = false
     @State private var userAccount: String = ""
     @State private var userPassword: String = ""
+    
+    private func selectUser(userAccount: String, userPassword: String) -> FetchedResults<User>.Element? {
+        for user in users {
+            if user.useraccount! == userAccount && user.userpassword! == MD5(plainMessage: userPassword) {
+                return user
+            }
+        }
+        
+        return nil
+    }
+    
+    private func signin() {
+        print("click sign in")
+        if selectUser(userAccount: userAccount, userPassword: userPassword) != nil {
+            signeduser = selectUser(userAccount: userAccount, userPassword: userPassword)
+            print("sign in successfully✅")
+            userAccount = ""
+            userPassword = ""
+            isFailSignUp = false
+            isLogined = true
+        } else {
+            isFailSignUp = true
+            print("Failed to login")
+        }
+    }
     
     var body: some View {
         VStack(alignment: .center, spacing: 50) {
@@ -78,7 +107,7 @@ struct SignInView: View {
                         //login function, not below
                         #if os(iOS)
                         withAnimation(.spring(response: 1, dampingFraction: 0.5, blendDuration: 0.5)) {
-                            isLogined.toggle()
+                            signin()
                         }
                         #endif
                     } label: {
@@ -104,8 +133,8 @@ struct SignInView: View {
     }
 }
 
-struct SignInView_Previews: PreviewProvider {
-    static var previews: some View {
-        SignInView(isLogined: .constant(false))
-    }
-}
+//struct SignInView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SignInView(isLogined: .constant(false))
+//    }
+//}
