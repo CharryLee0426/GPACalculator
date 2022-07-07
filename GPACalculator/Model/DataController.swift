@@ -38,7 +38,7 @@ class DataController: ObservableObject {
         newUser.id = UUID()
         newUser.username = userName
         newUser.useraccount = userAccount
-        newUser.userpassword = MD5(plainMessage: userPassword)
+        newUser.userpassword = SHA256(plainMessage: userPassword)
         newUser.usergender = Int16(userGender)
         newUser.useravatar = userAvatar
         newUser.userdescription = ""
@@ -48,7 +48,7 @@ class DataController: ObservableObject {
     
     func editUser(user: User, userName: String, userPassword: String, userGender: Int, userAvatar: Double, userDescription: String, context: NSManagedObjectContext) {
         user.username = userName
-        user.userpassword = MD5(plainMessage: userPassword)
+        user.userpassword = SHA256(plainMessage: userPassword)
         user.usergender = Int16(userGender)
         user.useravatar = userAvatar
         user.userdescription = userDescription
