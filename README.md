@@ -182,3 +182,8 @@ Potential features that needs further development:
 
 * Account Delete Function, which is very important for user's rights and privacy;
 * Choose Avatar from Image, not just change the color of the `Avatar`;
+
+### July 7, 2022
+It seems that the IELTS on July 10, 2022 is not canceled. Great!
+
+The only work I do today is improving the encrypt method from MD5 to SHA256, which is a more safe way for data security.

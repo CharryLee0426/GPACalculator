@@ -20,7 +20,7 @@ struct SignInView: View {
     
     private func selectUser(userAccount: String, userPassword: String) -> FetchedResults<User>.Element? {
         for user in users {
-            if user.useraccount! == userAccount && user.userpassword! == MD5(plainMessage: userPassword) {
+            if user.useraccount! == userAccount && user.userpassword! == SHA256(plainMessage: userPassword) {
                 return user
             }
         }
