@@ -187,3 +187,17 @@ Potential features that needs further development:
 It seems that the IELTS on July 10, 2022 is not canceled. Great!
 
 The only work I do today is improving the encrypt method from MD5 to SHA256, which is a more safe way for data security.
+
+### July 13, 2022
+
+My IELTS score is a normal result for Chinese examinees but good for my first attempt. The 6.5 is not as difficult as what I imaged before. However, I still have to work hard in the Listening and Reading part for score **7.0**.
+
+### August 1, 2022
+
+It is about half a month that I didn't commit anything. I learnt some about data flow in SwiftUI and another powerful frameworks of Swift. I also spent much time on preparing for GRE, which is a must for applying for some good universities. I am very confused for how to send the account login state to another tab. I don't know the proper way. The previous work I did seems to be in one tab called 'Me'. I didn't consider the data flow between two tabs.
+
+However, work doesn't be interrupted by endless thinking. I decided to finish the UI design first for index views. Then I will find the way to exchange the data between two tabs and refactor them.
+
+Here is a preview of indexview which shows there is no user signed in.
+
+<img src="./MarkdownImages/IndexWelcomeView.png" style="zoom:50%;" />
